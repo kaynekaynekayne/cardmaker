@@ -6,7 +6,7 @@ const Header = ({onLogout}) => (
         {onLogout && (<button className={styles.logout} onClick={onLogout}>
             Logout
         </button>)}
-        <img className={styles.logo} src="/images/logo.png" alt="logo"></img>
+        <img className={styles.logo} src="/images/logo5.png" alt="logo"></img>
         <h1 className={styles.title}>Business Card Maker</h1>
     </header>
 );

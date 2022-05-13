@@ -33,6 +33,7 @@
 
 .button:hover{
     background-color: rgb(255, 153, 79);
+    border: 2px solid wheat;
     color:whitesmoke;
     
 }

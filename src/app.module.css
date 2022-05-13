@@ -1,7 +1,9 @@
 @value makerGrey from './common/colors.css';
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
 
 *{
     box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
 }
 
 .app{

@@ -9,7 +9,8 @@
 }
 
 .logo{
-    width:3em;
+    width:4em;
+    
 }
 
 .title{
@@ -23,7 +24,7 @@
     top:1em;
     padding:0.8em;
     border-radius:20%;
-    background-color:black;
+    background-color:rgb(33, 20, 4);
     color:whitesmoke;
     outline:0;
     border:0;
