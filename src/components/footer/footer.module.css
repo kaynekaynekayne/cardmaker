@@ -1,0 +1,11 @@
+@value customPurple from "../../common/colors.css";
+
+.footer{
+    width:100%;
+    background-color: customPurple;
+    text-align:center;
+}
+
+.title{
+    color:whitesmoke;
+}
