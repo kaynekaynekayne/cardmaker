@@ -20,13 +20,17 @@
 
 .logout{
     position:absolute;
-    right:3em;
+    right:1.2em;
     top:1em;
-    padding:0.8em;
-    border-radius:20%;
-    background-color:rgb(33, 20, 4);
+    padding:0.5em;
+    border-radius:18%;
+    background-color:rgb(245, 149, 23);
     color:whitesmoke;
     outline:0;
     border:0;
     cursor: pointer;
+}
+
+.logout:hover{
+    background-color: rgb(32, 31, 31);
 }

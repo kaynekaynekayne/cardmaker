@@ -1,4 +1,3 @@
-@value makerGrey from './common/colors.css';
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
 
 *{
@@ -12,5 +11,5 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: makerGrey;
+    background-image: linear-gradient(120deg, #efe3fa 0%, #d7e8fa 100%);
 }

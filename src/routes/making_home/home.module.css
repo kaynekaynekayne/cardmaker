@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:100vh;
+}
+
+.content{
+    display: flex;
+    flex:1;
+}
+
+@media screen and (max-width:62rem){
+    .content{
+        flex-direction: column;
+    }
+}
