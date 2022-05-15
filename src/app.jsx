@@ -8,11 +8,15 @@ import {onAuthStateChanged} from 'firebase/auth';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn]=useState(false);
+  const [userInfo,setUserInfo]=useState(null);
 
   useEffect(()=>{
     onAuthStateChanged(auth,(user)=>{
       if(user){
         setIsLoggedIn(true);
+        setUserInfo({
+          uid:user.uid,
+        })
       } else{
         setIsLoggedIn(false);
       }
@@ -21,7 +25,7 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <AppRouter isLoggedIn={isLoggedIn}/>
+      <AppRouter isLoggedIn={isLoggedIn} userInfo={userInfo}/>
     </div>
   );
 }

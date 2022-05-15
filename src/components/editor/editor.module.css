@@ -1,7 +1,7 @@
 .editor{
     flex-basis: 50%;
     border-right:1px solid rgb(179, 178, 178);
-    padding:0.3em 1em;
+    padding:0.5em 2em;
 }
 
 .title{
@@ -12,64 +12,3 @@
 }
 
 /**/
-
-.form{
-    display: flex;
-    width:100%;
-    flex-wrap:wrap;
-    border-top:1px solid black;
-    border-left:1px solid black;
-    border-bottom:1px solid black;
-    margin-bottom:1em;
-    
-}
-
-.input,
-.textarea,
-.select{
-    font-size: 0.7em;
-    width:100%;
-    border:0;
-    padding:0.5em;
-    border-bottom: 1px solid black;
-    border-right:1px solid black;
-    background:white;
-}
-
-.input,
-.select{
-    flex:1 1 30%;
-}
-
-.input:focus,
-.textarea:focus,
-.select:focus,
-.button:focus{
-    outline:0;
-}
-
-.textarea{
-    flex-basis:100%;
-    resize:none;
-}
-
-.upload,.button{
-    padding:0;
-    flex:1 1 50%;
-    border:none;
-    cursor: pointer;
-}
-
-.upload{
-    background-color: rgb(208, 203, 255);
-    text-align: center;
-}
-
-
-.button{
-    background-color: rgb(75, 75, 77);
-    color:white;
-    border-left:1px solid black;
-    border-right:1px solid black;
-}
-

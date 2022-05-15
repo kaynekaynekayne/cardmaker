@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import styles from './inputForm.module.css';
+import styles from './addForm.module.css';
 import { db } from '../../service/firebase';
 import {addDoc,collection} from 'firebase/firestore';
 
-const InputForm = () => {
+const AddForm = ({userInfo}) => {
 
     const [name,setName]=useState('');
     const [company,setCompany]=useState('');
@@ -25,6 +25,8 @@ const InputForm = () => {
                 userJob:job,
                 userEmail:email,
                 userGreeting:greeting,
+                userId:userInfo.uid,
+                createdAt:Date.now(),
             })
         }catch(error){
             console.log(error);
@@ -105,4 +107,4 @@ const InputForm = () => {
     );
 };
 
-export default InputForm;
+export default AddForm;
