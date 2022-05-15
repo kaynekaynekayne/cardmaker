@@ -22,11 +22,14 @@ const Header = ({isLoggedIn}) => {
 
     return(
         <header className={styles.header}>
-            {isLoggedIn && (<button className={styles.logout} onClick={onLogout}>
-                Logout
-            </button>)}
+            {isLoggedIn ?
+                <button className={styles.logout} onClick={onLogout}>
+                    Logout
+                </button>
+            :
+                <p className={styles.title}>Business Card Maker</p>
+            }
             <img className={styles.logo} src="/images/logo5.png" alt="logo"></img>
-            <h1 className={styles.title}>Business Card Maker</h1>
         </header>
     )
 };
