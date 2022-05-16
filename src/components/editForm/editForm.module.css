@@ -13,13 +13,13 @@
 .input,
 .textarea,
 .select{
-    font-size: 0.7em;
+    font-size: 0.75em;
     width:100%;
     border:0;
     padding:0.5em;
     border-bottom: 1px solid black;
     border-right:1px solid black;
-    background:white;
+    background:rgb(252, 252, 252);
 }
 
 .input,
