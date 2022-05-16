@@ -12,10 +12,12 @@ const Editor = ({userInfo,cards}) => {
     return(
         <section className={styles.editor}>
             <p className={styles.title}>Card Maker</p>
-            {cards.map((card)=>(
-                <EditForm card={card} key={card.id}/>
-            ))}
-            <AddForm userInfo={userInfo}/>
+            <div className={styles.container}>
+                {cards.map((card)=>(
+                    <EditForm card={card} key={card.id}/>
+                ))}
+                <AddForm userInfo={userInfo}/>
+            </div>
             
         </section>
     );

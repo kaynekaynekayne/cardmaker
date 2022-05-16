@@ -2,12 +2,16 @@
 .card{
     display: flex;
     align-items:center;
-    justify-content: center;
+    margin:0 auto;
+    margin-bottom:2.1em;
     border-radius:1em;
-    margin-bottom:2em;
-    padding:1em 0.5em;
+    padding:2em 1em;
+    max-width: 500px; 
+    
     width:100%;
-
+    /* 
+    justify-content: center;
+*/
 }
 
 .card.dark{
@@ -35,6 +39,7 @@
 
 .info{
     width:100%;
+    margin-left:20px;
 }
 
 .name,
