@@ -5,22 +5,19 @@
     margin:0 auto;
     margin-bottom:2.1em;
     border-radius:1em;
-    padding:2em 1em;
-    max-width: 500px; 
-    
+    padding:1.5em 1em;
+    max-width: 470px; 
     width:100%;
-    /* 
-    justify-content: center;
-*/
+    box-shadow: 10px 9px 20px -5px rgba(0,0,0,0.23);
 }
 
 .card.dark{
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(38, 38, 38);
     color:whitesmoke;
 }
 
 .card.light{
-    background-color: whitesmoke;
+    background-color: rgb(255, 254, 247);
     color: rgb(20, 20, 20);
 }
 
@@ -48,7 +45,7 @@
 .email,
 .greeting{
     margin:0;
-    font-size:0.8rem;
+    font-size:0.9rem;
     margin-bottom:0.2em;
 }
 

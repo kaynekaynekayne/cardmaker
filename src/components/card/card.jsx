@@ -4,25 +4,26 @@ import styles from './card.module.css';
 const DEFAULT_IMAGE='/images/default_logo.png';
 
 const Card = ({card}) => {
-    //카드프리뷰 최종애들
+    
     const url=DEFAULT_IMAGE;
+    const {userName,userCompany,userJob,userTheme,userEmail,userGreeting}=card;
     return(
         
-        <div className={`${styles.card} ${getStyles(card.userTheme)}`}>
+        <div className={`${styles.card} ${makeTheme(userTheme)}`}>
             <img className={styles.avatar} src={url} alt="profile photo"/>
             <div className={styles.info}>
-                <h1 className={styles.name}>{card.userName}</h1>
-                <p className={styles.company}>{card.userCompany}</p>
-                <p className={styles.job}>{card.userJob}</p>
-                <p className={styles.email}>{card.userEmail}</p>
-                <p className={styles.greeting}>{card.userGreeting}</p>
+                <h1 className={styles.name}>{userName}</h1>
+                <p className={styles.company}>{userCompany}</p>
+                <p className={styles.job}>{userJob}</p>
+                <p className={styles.email}>{userEmail}</p>
+                <p className={styles.greeting}>{userGreeting}</p>
             </div>
         </div>
 
     );
 };
 
-function getStyles(theme){
+function makeTheme(theme){
     switch(theme){
         case 'dark':
             return styles.dark;

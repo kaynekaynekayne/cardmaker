@@ -7,8 +7,10 @@ import {onSnapshot,collection,query,orderBy} from 'firebase/firestore';
 
 const Editor = ({userInfo,cards}) => {
 
+    // const onChange=(e)=>{
 
-
+    // }
+    
     return(
         <section className={styles.editor}>
             <p className={styles.title}>Card Maker</p>

@@ -1,6 +1,6 @@
 .editor{
     flex-basis: 50%;
-    border-right:1px solid rgb(179, 178, 178);
+    /* border-right:1px solid rgb(179, 178, 178); */
     padding:0 3em;
 }
 

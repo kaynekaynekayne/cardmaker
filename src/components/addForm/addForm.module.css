@@ -1,3 +1,7 @@
+.container{
+    border-top:1px dotted black;
+    padding-top:30px;
+}
 .form{
     display: flex;
     width:100%;
@@ -6,7 +10,6 @@
     border-left:1px solid black;
     border-bottom:1px solid black;
     margin-bottom:1em;
-    
 }
 
 .input,
