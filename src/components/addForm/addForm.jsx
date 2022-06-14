@@ -1,21 +1,33 @@
 import React, { useState } from 'react';
 import styles from './addForm.module.css';
-import { db } from '../../service/firebase';
+import { db,storage } from '../../service/firebase';
 import {addDoc,collection} from 'firebase/firestore';
+import {getDownloadURL, ref, uploadBytes} from 'firebase/storage';
+import {v4} from 'uuid';
 
 const AddForm = ({userInfo}) => {
 
-    const [name,setName]=useState('');
-    const [company,setCompany]=useState('');
-    const [theme,setTheme]=useState('light'); 
-    const [job,setJob]=useState('');
-    const [email,setEmail]=useState('');
-    const [greeting,setGreeting]=useState('');
+    const [name,setName]=useState("");
+    const [company,setCompany]=useState("");
+    const [theme,setTheme]=useState("light"); 
+    const [job,setJob]=useState("");
+    const [email,setEmail]=useState("");
+    const [greeting,setGreeting]=useState("");
+
+    const [attachedImg,setAttachedImg]=useState("");
 
     const dbRef=collection(db,"cards");
     
+
     const onSubmit=async(e)=>{
         e.preventDefault();
+
+        let attachmentUrl="";
+        if(attachedImg!==""){
+            const imgRef=ref(storage, `images/${attachedImg.name+v4()}`);
+            await uploadBytes(imgRef,attachedImg);
+            attachmentUrl=await getDownloadURL(imgRef);
+        };
 
         try{
             await addDoc(dbRef,{
@@ -27,6 +39,7 @@ const AddForm = ({userInfo}) => {
                 userGreeting:greeting,
                 userId:userInfo.uid,
                 createdAt:Date.now(),
+                attachmentUrl,
             })
         }catch(error){
             console.log(error);
@@ -92,10 +105,12 @@ const AddForm = ({userInfo}) => {
                     required
                     placeholder="words">
                 </textarea>
+
                 <label htmlFor="file-upload" className={styles.upload}>
                     <i className="fa-solid fa-images"></i>
                 </label>
                 <input 
+                    onChange={(e)=>setAttachedImg(e.target.files[0])}
                     id="file-upload"
                     type="file"
                     style={{display:'none'}}

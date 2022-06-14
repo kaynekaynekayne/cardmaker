@@ -2,6 +2,18 @@
     flex-basis: 50%;
     /* border-right:1px solid rgb(179, 178, 178); */
     padding:0 3em;
+    overflow-y:auto;
+
+}
+.editor::-webkit-scrollbar {
+    width: 5px;
+}
+.editor::-webkit-scrollbar-thumb {
+    background-color: #777485;
+}
+.editor::-webkit-scrollbar-track {
+    background-color: grey;
+    box-shadow: inset 0px 0px 5px white;
 }
 
 .title{
@@ -12,5 +24,4 @@
 }
 
 .container{
-    padding-top:0.7em;
 }

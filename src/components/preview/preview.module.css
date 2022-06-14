@@ -1,12 +1,24 @@
 .preview{
     flex-basis: 50%;
     padding:0 3em;
+    overflow-y:auto;
+}
+
+.preview::-webkit-scrollbar {
+    width: 5px;
+}
+.preview::-webkit-scrollbar-thumb {
+    background-color: #6f6c81;
+}
+.preview::-webkit-scrollbar-track {
+    background-color: grey;
+    box-shadow: inset 0px 0px 5px white;
 }
 
 .title{
     width:100%;
     text-align: center;
-    margin-bottom:1.4em;
+    
     color:rgb(87, 90, 134);
 }
 
